@@ -30,7 +30,7 @@ file { "/home/monitor/src":
 }
 
 file { "/home/monitor/src/my_memory_check":
-  ensure => 'link',
+  ensure => "link",
   target => "/home/monitor/scripts/memory_check",
 }
 
@@ -41,3 +41,7 @@ cron { "memory check":
   minute => "*/10",
 }
 
+file { "/etc/localtime":
+  ensure => "link",
+  target => "/usr/share/zoneinfo/Asia/Manila",
+}
