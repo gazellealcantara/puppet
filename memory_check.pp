@@ -16,7 +16,7 @@ file { "/home/monitor/scripts":
 }
 
 exec { "git":
-  command => "/usr/bin/wget -q https://rawcdn.githack.com/gazellealcantara/memory-check/master/memory_check.sh -O /home/monitor/scripts/memory_check",
+  command => "/usr/bin/wget -q https://cdn.rawgit.com/gazellealcantara/memory-check/1b3ff99f/memory_check -O /home/monitor/scripts/memory_check",
   path => "/home/monitor/scripts"
 }
 
@@ -45,3 +45,4 @@ file { "/etc/localtime":
   ensure => "link",
   target => "/usr/share/zoneinfo/Asia/Manila",
 }
+
